@@ -81,6 +81,8 @@ class LinkedList:
                 ptr = ptr.next
             if ptr == None:
                 return False
+            if ptr== self.tail:
+                self.tail = prev
             prev.next = ptr.next
             ptr.next = None
             self.size -=1
